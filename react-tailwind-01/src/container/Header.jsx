@@ -12,31 +12,32 @@ import {
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import Logo from '../component/Logo';
+import { Us, Es, Mx, Br } from "react-flags-select";
 
 const solutions = [
   {
     name: 'Pesos Mexicanos',
     description: 'Currency of the Mexico',
     href: '#',
-    icon: ChartBarIcon,
+    icon: Mx,
   },
   {
     name: 'Dolar estadounidense',
     description: 'Currency of the EEUU',
     href: '#',
-    icon: CursorArrowRaysIcon,
+    icon: Us,
   },
   {
     name: 'Euro',
     description: "Currency of european countries",
     href: '#',
-    icon: Squares2X2Icon,
+    icon: Es,
   },
   {
     name: 'Real',
     description: 'Currency of the Brazil',
     href: '#',
-    icon: ArrowPathIcon,
+    icon: Br,
   },
 ]
 const callsToAction = [
