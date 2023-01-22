@@ -1,13 +1,9 @@
 import { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
 import {
-  ArrowPathIcon,
   Bars3Icon,
-  ChartBarIcon,
-  CursorArrowRaysIcon,
   PhoneIcon,
   PlayIcon,
-  Squares2X2Icon,
   XMarkIcon,
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
@@ -17,32 +13,28 @@ import { Us, Es, Mx, Br } from "react-flags-select";
 const solutions = [
   {
     name: 'Pesos Mexicanos',
-    description: 'Currency of the Mexico',
+    description: 'Moneda de Mexico',
     href: '#',
     icon: Mx,
   },
   {
     name: 'Dolar estadounidense',
-    description: 'Currency of the EEUU',
+    description: 'Moneda de Estados Unidos',
     href: '#',
     icon: Us,
   },
   {
     name: 'Euro',
-    description: "Currency of european countries",
+    description: "Moneda de los paises Europeos",
     href: '#',
     icon: Es,
   },
   {
     name: 'Real',
-    description: 'Currency of the Brazil',
+    description: 'Moneda de Brasil',
     href: '#',
     icon: Br,
   },
-]
-const callsToAction = [
-  { name: 'Watch Demo', href: '#', icon: PlayIcon },
-  { name: 'Contact Sales', href: '#', icon: PhoneIcon },
 ]
 
 function classNames(...classes) {
@@ -56,7 +48,6 @@ export default function Example() {
         <div className="flex items-center justify-between border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <a href="#">
-              <span className="sr-only">Your Company</span>
               <Logo className="h-8 w-auto sm:h-10" />
             </a>
           </div>
@@ -112,19 +103,6 @@ export default function Example() {
                             </a>
                           ))}
                         </div>
-                        <div className="space-y-6 bg-gray-50 px-5 py-5 sm:flex sm:space-y-0 sm:space-x-10 sm:px-8">
-                          {callsToAction.map((item) => (
-                            <div key={item.name} className="flow-root">
-                              <a
-                                href={item.href}
-                                className="-m-3 flex items-center rounded-md p-3 text-base font-medium text-gray-900 hover:bg-gray-100"
-                              >
-                                <item.icon className="h-6 w-6 flex-shrink-0 text-gray-400" aria-hidden="true" />
-                                <span className="ml-3">{item.name}</span>
-                              </a>
-                            </div>
-                          ))}
-                        </div>
                       </div>
                     </Popover.Panel>
                   </Transition>
@@ -145,7 +123,7 @@ export default function Example() {
         leaveFrom="opacity-100 scale-100"
         leaveTo="opacity-0 scale-95"
       >
-       {/* ACA COMIENZA EL CODIGO RESPONSIVE PARA CELULAR */}
+
         <Popover.Panel focus className="absolute inset-x-0 top-0 origin-top-right transform p-2 transition md:hidden">
           <div className="divide-y-2 divide-gray-50 rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5">
             <div className="px-5 pt-5 pb-6">
