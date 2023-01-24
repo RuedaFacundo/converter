@@ -2,13 +2,11 @@ import { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
 import {
   Bars3Icon,
-  PhoneIcon,
-  PlayIcon,
   XMarkIcon,
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
-import Logo from '../component/Logo';
 import { Us, Es, Mx, Br } from "react-flags-select";
+import logo from '../statics/images/dolar.svg';
 
 const solutions = [
   {
@@ -48,7 +46,7 @@ export default function Example() {
         <div className="flex items-center justify-between border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <a href="#">
-              <Logo className="h-8 w-auto sm:h-10" />
+              <img src={logo} width='30px'></img>
             </a>
           </div>
           <div className="-my-2 -mr-2 md:hidden">
@@ -129,7 +127,7 @@ export default function Example() {
             <div className="px-5 pt-5 pb-6">
               <div className="flex items-center justify-between">
                 <div>
-                  <Logo className="h-8 w-auto" />
+                  <img src={logo} width='30px'></img>
                 </div>
                 <div className="-mr-2">
                   <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
