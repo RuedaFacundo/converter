@@ -1,9 +1,12 @@
 import './App.css';
 import Home from './container/Home';
+import { ContextProvider } from './context/ContextProvider';
 
 function App() {
   return (
-    <Home />
+    <ContextProvider>
+      <Home />
+    </ContextProvider>
   );
 }
 
