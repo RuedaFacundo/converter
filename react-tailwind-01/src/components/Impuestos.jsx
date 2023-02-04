@@ -9,12 +9,11 @@ const Impuestos = (props) => {
   function percentaje(impuesto) {
     switch (impuesto) {
       case '+ Impuesto PAÍS (30%)':
-        console.log('valor desde impuesto: ' +state) 
-        return state * 0.30;
+        return Math.round((state * 0.30) * 100) / 100;
       case '+ Imp. a las ganancias (45%)':
-        return state * 0.45;
+        return Math.round((state * 0.45) * 100) / 100;
       default:
-        return state;
+        return Math.round(state * 100) / 100;
     } 
   }
 

@@ -5,7 +5,7 @@ const InputDolar = () => {
   const { setState } = useContext(MyContext);
   const handleValueChange = e => {
     e.preventDefault();
-    setState(e.target.value);
+    setState(e.target.value * 193);
   }
 
   return (
