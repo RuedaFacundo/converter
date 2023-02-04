@@ -1,13 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Date from '../components/Date';
 import Impuestos from '../components/Impuestos';
 import InputDolar from '../components/InputDolar';
 import Total from '../components/Total';
+import { DataContext } from '../context/DataContext';
 
 const Converter = () => {
 
-  //TODO hacer pegada a api para obtener el valor oficial 
-  var dolarOficial = 193;
+  var dolarOficial = useContext(DataContext);
 
   return (
     <div class="mx-auto max-w-7xl px-6">
@@ -38,9 +38,9 @@ const Converter = () => {
             <div class="d-flex flex-column">
                 <span class="text-xs uppercase weight-500">Cotización dolar oficial</span>
                 <div class="d-inline-block text-l weight-500 mb-1">
-                    <span>1 USD =</span>
+                    <span>1 USD = </span>
                     <span id="usdOficialValue" class="text-success bold">{dolarOficial}</span>
-                    <span>ARS</span>
+                    <span> ARS</span>
                 </div>
                 <Date></Date>
             </div>

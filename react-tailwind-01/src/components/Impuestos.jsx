@@ -23,7 +23,7 @@ const Impuestos = (props) => {
           <span class="text-m weight-500">{impuesto}</span>
       </div>
       <div class="col-auto p-0">
-          <span id="countryTax" class="text-m">{
+          <span id="countryTax" class="text-m">${
           percentaje(impuesto) === 0 || isNaN(percentaje(impuesto)) ? '-' : percentaje(impuesto)}</span>
       </div>
     </div>

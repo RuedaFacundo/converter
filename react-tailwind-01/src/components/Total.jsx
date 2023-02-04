@@ -11,7 +11,7 @@ const Total = () => {
           <span class="text-m weight-500">Total con imp. incluídos</span>
       </div>
       <div class="col-auto p-0">
-          <span id="totalWithTaxes" class="text-m">{isNaN(state) ? '-' : Math.round((state * 1.75) * 100) / 100  }</span>
+          <span id="totalWithTaxes" class="text-m">${isNaN(state) ? '-' : Math.round((state * 1.75) * 100) / 100  }</span>
       </div>
     </div>
   )

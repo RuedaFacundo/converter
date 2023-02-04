@@ -1,11 +1,14 @@
 import React, { useContext } from 'react'
 import { MyContext } from '../context/ContextProvider';
+import { DataContext } from '../context/DataContext';
 
 const InputDolar = () => {
   const { setState } = useContext(MyContext);
+  var dolarOficial = useContext(DataContext);
+
   const handleValueChange = e => {
     e.preventDefault();
-    setState(e.target.value * 193);
+    setState(e.target.value * dolarOficial);
   }
 
   return (
