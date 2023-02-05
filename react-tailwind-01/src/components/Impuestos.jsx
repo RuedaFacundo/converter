@@ -18,12 +18,12 @@ const Impuestos = (props) => {
   }
 
   return (
-    <div class="flex flex-row py-6 justify-between">
-      <div class="col p-0">
-        <span class="text-m weight-500">{impuesto}</span>
+    <div className="flex flex-row py-6 justify-between">
+      <div className="col p-0">
+        <span className="text-m weight-500">{impuesto}</span>
       </div>
-      <div class="col-auto p-0">
-        <span id="countryTax" class="text-m">${
+      <div className="col-auto p-0">
+        <span id="countryTax" className="text-m">${
         percentaje(impuesto) === 0 || isNaN(percentaje(impuesto)) ? '-' : percentaje(impuesto)}</span>
       </div>
     </div>
