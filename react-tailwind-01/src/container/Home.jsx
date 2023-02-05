@@ -1,12 +1,10 @@
 import React from 'react'
-import Header from './Header';
-import Converter from './Converter';
+import HomeContent from './HomeContent';
 
 const Home = () => {
   return (
     <div>
-      <Header />
-      <Converter />
+      <HomeContent />
     </div>
   )
 }

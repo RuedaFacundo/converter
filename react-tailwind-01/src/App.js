@@ -1,9 +1,13 @@
 import './App.css';
 import Home from './container/Home';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 import { ContextProvider } from './context/ContextProvider';
 import { DataContext } from './context/DataContext';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Error404 from './container/Error404';
+import Converter from './container/Converter';
+import Header from './container/Header';
 
 function App() {
   const [data, setData] = useState([]);
@@ -29,7 +33,14 @@ function App() {
   return (
     <DataContext.Provider value={data}>
       <ContextProvider>
-        <Home />
+        <BrowserRouter>
+          <Header />
+          <Routes>
+            <Route path='/home' element={<Home />}></Route>
+            <Route path='/converter' element={<Converter />}></Route>
+            <Route path='' element={<Error404 />}></Route>
+          </Routes>
+        </BrowserRouter>
       </ContextProvider>
     </DataContext.Provider>
   );
