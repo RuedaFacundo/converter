@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import { MyContext } from '../context/ContextProvider';
 import { DataContext } from '../context/DataContext';
 import { useParams } from 'react-router-dom';
+import Country from './Country';
 
 const InputDolar = () => {
   const { setState } = useContext(MyContext);
@@ -17,22 +18,18 @@ const InputDolar = () => {
   const countries = [
     {
       country: 'Mexico',
-      img: "https://tiempofinanciero.com.ar/wp-content/plugins/calculadoras-rino-media//flags/usd.png?ezimgfmt=rs:26x17/rscb1/ngcb1/notWebP",
       description: 'Cantidad de Pesos Mexicanos (MX)'
     },
     {
       country: 'EEUU',
-      img: 'https://tiempofinanciero.com.ar/wp-content/plugins/calculadoras-rino-media//flags/usd.png?ezimgfmt=rs:26x17/rscb1/ngcb1/notWebP',
       description: 'Cantidad de dolares (USD)'
     },
     {
       country: 'Europa',
-      img: 'https://tiempofinanciero.com.ar/wp-content/plugins/calculadoras-rino-media//flags/usd.png?ezimgfmt=rs:26x17/rscb1/ngcb1/notWebP',
       description: 'Cantidad de Euros (€)'
     },
     {
       country: 'Brasil',
-      img: 'https://tiempofinanciero.com.ar/wp-content/plugins/calculadoras-rino-media//flags/usd.png?ezimgfmt=rs:26x17/rscb1/ngcb1/notWebP',
       description: 'Cantidad de Reales (R)'
     },
   ]
@@ -44,8 +41,7 @@ const InputDolar = () => {
       <label htmlFor="website-admin" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{result[0].description}</label>
       <div className="flex">
         <span className="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-r-0 border-gray-300 rounded-l-md dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600">
-        <img src={result[0].img} width="32" alt="currency" height="32">
-        </img>
+          <Country country={result[0].country} />
         </span>
         <input 
           type="tel" 
