@@ -36,9 +36,9 @@ function App() {
         <BrowserRouter>
           <Header />
           <Routes>
-            <Route path='/home' element={<Home />}></Route>
+            <Route exact path="/" element={<Home />}></Route>
             <Route path='/converter/:country' element={<Converter />}></Route>
-            <Route path='' element={<Error404 />}></Route>
+            <Route path="*" element={<Error404 />} />
           </Routes>
         </BrowserRouter>
       </ContextProvider>
