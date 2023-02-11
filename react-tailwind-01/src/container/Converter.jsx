@@ -8,7 +8,14 @@ import { DataContext } from '../context/DataContext';
 
 const Converter = () => {
 
-  var dolarOficial = useContext(DataContext);
+  var cotizaciones = useContext(DataContext);
+  const ratesClean = {
+    "ARS": 0,
+    "EUR": 0,
+    "MXN": 0,
+    "BRL": 0
+  };
+  const rates = cotizaciones === null ? ratesClean : cotizaciones.rates;
   const { country } = useParams();
 
   return (
@@ -26,15 +33,15 @@ const Converter = () => {
           <div className="d-flex flex-column width-100 border-bottom pb-3 mb-3">
               <Impuestos
                 impuesto='Sin impuestos'
-                valor={dolarOficial}
+                valor={rates.ARS}
               ></Impuestos>
               <Impuestos
                 impuesto='+ Impuesto PAÍS (30%)'
-                valor={dolarOficial}
+                valor={rates.ARS}
               ></Impuestos>
               <Impuestos
                 impuesto='+ Imp. a las ganancias (45%)'
-                valor={dolarOficial}
+                valor={rates.ARS}
               ></Impuestos>
               <Total></Total>
           </div>
@@ -43,7 +50,7 @@ const Converter = () => {
                 <span className="text-xs uppercase weight-500">Cotización dolar oficial</span>
                 <div className="d-inline-block text-l weight-500 mb-1">
                     <span>1 USD = </span>
-                    <span id="usdOficialValue" className="text-success bold">{dolarOficial}</span>
+                    <span id="usdOficialValue" className="text-success bold">{Math.round(rates.ARS)}</span>
                     <span> ARS</span>
                 </div>
                 <Date></Date>
