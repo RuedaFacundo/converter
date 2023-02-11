@@ -1,0 +1,32 @@
+{
+  "countries": [
+    {
+      "id": 1,
+      "country": "Mexico",
+      "name": "Pesos Mexicanos",
+      "title": "Cantidad de Pesos Mexicanos (MX)",
+      "description": "Moneda de Mexico"
+    },
+    {
+      "id": 2,
+      "country": "EEUU",
+      "name": "Dolar estadounidense",
+      "title": "Cantidad de dolares (USD)",
+      "description": "Moneda de Estados Unidos"
+    },
+    {
+      "id": 3,
+      "country": "Europa",
+      "name": "Euro",
+      "title": "Cantidad de Euros (€)",
+      "description": "Moneda de los paises Europeos"
+    },
+    {
+      "id": 4,
+      "country": "Brasil",
+      "name": "Real",
+      "title": "Cantidad de Reales (R)",
+      "description": "Moneda de Brasil"
+    }
+  ]
+}
