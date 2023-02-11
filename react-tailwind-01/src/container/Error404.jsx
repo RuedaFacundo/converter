@@ -12,7 +12,7 @@ const Error404 = () => {
         <polygon fill="currentColor" points="383.958 182.63 360.042 161.37 338.671 185.412 314.63 164.042 293.37 187.958 317.412 209.329 296.042 233.37 319.958 254.63 341.329 230.588 365.37 251.958 386.63 228.042 362.588 206.671 383.958 182.63"></polygon>
       </svg>
       <p className="text-3xl">Ocurrio un error. <br/> Intente nuevamente.</p>
-      <Link to="/home" className="px-8 py-3 font-semibold rounded dark:bg-gray-300 dark:text-gray-900">Back to home</Link>     
+      <Link to="/" className="px-8 py-3 font-semibold rounded dark:bg-gray-300 dark:text-gray-900">Back to home</Link>     
     </div>
   </section>
   )
