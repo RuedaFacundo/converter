@@ -5,6 +5,7 @@ import Impuestos from '../components/Impuestos';
 import InputDolar from '../components/InputDolar';
 import Total from '../components/Total';
 import { DataContext } from '../context/DataContext';
+import Footer from '../container/Footer';
 
 const Converter = () => {
 
@@ -56,6 +57,7 @@ const Converter = () => {
                 <Date></Date>
             </div>
           </div>
+          <Footer></Footer>
       </form>
     </div>
   )
